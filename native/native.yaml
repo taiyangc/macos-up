@@ -1,0 +1,2 @@
+# name: command to run in bash. Notes as # comments.
+# Use a | block for a command that spans lines, starts with a quote, or contains ": " or " #".
