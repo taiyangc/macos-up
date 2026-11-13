@@ -1,0 +1,19 @@
+name: Check
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  yaml:
+    name: YAML format
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      # Lints every .yaml and .yml file with the rules in .yamllint.yml.
+      # --strict fails on warnings too.
+      - run: pipx run --spec yamllint==1.38.0 yamllint --strict .

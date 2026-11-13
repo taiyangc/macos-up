@@ -32,5 +32,5 @@ Run commands or copy files only when the user asks. Back up an existing destinat
 - In YAML, a value that spans lines, starts with a quote, or contains `: ` or ` #` goes in a `|` block.
 - For a new install type, create `<type>/<type>.yaml` with `name: value` lines and add a row to the table above.
 - Keep secrets out: no tokens, keys or `.env` files. Use a placeholder such as `<your-email>` and note it.
-- Check that the lists still parse:
-  `ruby -ryaml -e 'ARGV.each { |f| YAML.load_file(f); puts "ok #{f}" }' */*.yaml && ruby -c homebrew/Brewfile`
+- Check the lists the way CI does (`.github/workflows/check.yml`). It lints every `.yaml` and `.yml` file, including configs saved under `config/`, with the rules in `.yamllint.yml`:
+  `pipx run --spec yamllint==1.38.0 yamllint --strict . && ruby -c homebrew/Brewfile`

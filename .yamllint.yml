@@ -1,0 +1,14 @@
+# Rules for the YAML format check in .github/workflows/check.yml.
+extends: default
+
+rules:
+  # Lists open with a comment that explains their format, not with ---.
+  document-start: disable
+  # Commands and URLs run long.
+  line-length: disable
+  # Notes can follow an entry after one space: `name: value # note`.
+  comments:
+    min-spaces-from-content: 1
+  # Workflows use `on:` as a key. Truthy values such as `yes` are still flagged.
+  truthy:
+    check-keys: false
