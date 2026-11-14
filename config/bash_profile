@@ -1,0 +1,45 @@
+# The following lines were added by Docker Desktop to add commands to your PATH.
+export PATH="$PATH:/Users/eric/.docker/bin"
+# End of Docker Desktop section.
+
+export PS1="\u\[\e[1;31m\]@\[\e[m\]\h \[\e[1;34m\]\w\[\e[m\] \[\e[1;31m\]$\[\e[m\] "
+export SVN_EDITOR="vim"
+
+alias vim="mvim -v"
+alias ls='ls -F'
+
+export PATH=/opt/homebrew/bin:/opt/homebrew/opt/python@3/libexec/bin:~/.local/bin:~/.cargo/bin:/sbin:$PATH
+export NODE_PATH='/opt/homebrew/lib/node_modules'
+
+ssh-add $HOME/.ssh/id_rsa &> /dev/null
+
+alias pipup="pip list --outdated | tail -n +3 | sed -E 's/ +.*$//g' | xargs -n1 pip install -U"
+
+alias gg="git grep -n"
+alias ggr="git grep --recurse-submodules"
+alias gs="git status"
+alias gca="git commit -a"
+alias gcaa="git commit -a --amend"
+alias gd="git diff" 
+alias gdn="git diff --name-only" 
+alias gl="git log" 
+alias gpl="git pull" 
+alias gps="git push" 
+alias gb="git branch" 
+alias gc="git checkout"
+alias gcb="git checkout -b"
+alias gp="git pull"
+
+# docker
+alias dcls='docker ps -a'
+alias dcs='docker stop $(docker ps -aq)'
+alias dcrm='docker rm $(docker ps -aq)'
+alias dirm='docker image prune'
+
+alias k="kubectl"
+
+function git-sed() {
+    git grep -l "$1" | xargs sed -i '' -e "s/$1/$2/g"
+}
+
+. "$HOME/.cargo/env"

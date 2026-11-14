@@ -1,1 +1,7 @@
 # brew "name" for a formula, cask "name" for an app. Notes as # comments.
+git "git"
+bash "bash"
+vim "macvim"
+rustup "rustup"curl -fsSL https://claude.ai/install.sh | bash
+foundry "foundry"
+python "python"
