@@ -1,0 +1,5 @@
+# name: command to run in bash after installing, named after what it sets up. Notes as # comments.
+# Use a | block for a command that spans lines, starts with a quote, or contains ": " or " #".
+bash: | # Homebrew puts bash on PATH but doesn't make it the login shell. chsh does, and only accepts shells listed in /etc/shells.
+  echo /opt/homebrew/bin/bash | sudo tee -a /etc/shells
+  chsh -s /opt/homebrew/bin/bash

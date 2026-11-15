@@ -12,6 +12,7 @@ Append one line to the list for its type:
 | `homebrew/` | `Brewfile` | `brew "git"` or `cask "firefox"` |
 | `download/` | `download.yaml` | `xcode: https://developer.apple.com/download/applications/` |
 | `config/` | `config.yaml` | `git/gitconfig: ~/.gitconfig`, with the file saved as `config/git/gitconfig` |
+| `setup/` | `setup.yaml` | `gh: gh auth login`, to run after `gh` is installed |
 
 - Notes go in `# comments`.
 - A command that spans lines, starts with a quote, or contains `: ` or ` #` goes in a YAML `|` block:
