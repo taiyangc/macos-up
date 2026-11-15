@@ -1,2 +1,3 @@
 # file: destination, where file is a path under config/ (e.g. git/gitconfig: ~/.gitconfig). Notes as # comments.
 bash_profile: ~/.bash_profile
+vimrc: ~/.vimrc

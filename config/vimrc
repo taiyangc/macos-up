@@ -1,0 +1,28 @@
+syntax on
+set background=dark
+set tabstop=4
+set shiftwidth=4
+set bs=2
+set expandtab
+set history=50
+set mouse=a
+if has('mouse_sgr')
+    set ttymouse=sgr
+endif
+set nocompatible
+set ai
+set ruler
+set hlsearch
+set incsearch
+set formatoptions=ro
+set clipboard=unnamed
+"autocmd FileType python set omnifunc=pythoncomplete#Complete
+"autocmd FileType python set noexpandtab
+"autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
+"autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
+"autocmd FileType css set omnifunc=csscomplete#CompleteCSS
+"autocmd FileType xml set omnifunc=xmlcomplete#CompleteTags
+"autocmd FileType php set omnifunc=phpcomplete#CompletePHP
+"autocmd FileType c set omnifunc=ccomplete#Complete
+"inoremap <Nul> <C-x><C-o>
+filetype plugin indent on
