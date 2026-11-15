@@ -1,3 +1,5 @@
 # file: destination, where file is a path under config/ (e.g. git/gitconfig: ~/.gitconfig). Notes as # comments.
+# file can also be a GitHub URL of a file (.../blob/<ref>/<path>), a directory (.../tree/<ref>/<path>) or a whole repo to clone (https://github.com/<owner>/<repo>).
 bash_profile: ~/.bash_profile
 vimrc: ~/.vimrc
+https://github.com/taiyangc/.claude: ~/.claude

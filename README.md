@@ -23,6 +23,14 @@ Append one line to the list for its type:
     second command
   ```
 
+- A config kept on GitHub needs no copy under `config/`. Put its GitHub URL in place of the path. A file (`/blob/`) is downloaded, a directory (`/tree/`) is copied, and a whole repo is cloned, so `git pull` updates it:
+
+  ```yaml
+  https://github.com/<owner>/dotfiles/blob/main/gitconfig: ~/.gitconfig
+  https://github.com/<owner>/dotfiles/tree/main/nvim: ~/.config/nvim
+  https://github.com/<owner>/tmux-config: ~/.config/tmux
+  ```
+
 - A new install type is a new folder with a `<type>.yaml` of `name: value` lines. Add it to the table in `AGENTS.md`.
 - To fill the Brewfile from this Mac, run `brew bundle dump --file=-`. It prints everything you installed with Homebrew, with descriptions.
 
