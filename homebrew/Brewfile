@@ -5,3 +5,4 @@ brew "macvim" # vim
 brew "rustup"
 brew "foundry"
 brew "python"
+brew "solidity"

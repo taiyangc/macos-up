@@ -8,7 +8,7 @@ export SVN_EDITOR="vim"
 alias vim="mvim -v"
 alias ls='ls -F'
 
-export PATH=/opt/homebrew/bin:/opt/homebrew/opt/python@3/libexec/bin:~/.local/bin:~/.cargo/bin:/sbin:$PATH
+export PATH=/opt/homebrew/bin:/opt/homebrew/opt/python@3/libexec/bin:~/.local/bin:~/.rustup/toolchains/stable-aarch64-apple-darwin/bin:/sbin:$PATH
 export NODE_PATH='/opt/homebrew/lib/node_modules'
 
 ssh-add $HOME/.ssh/id_rsa &> /dev/null
@@ -41,5 +41,3 @@ alias k="kubectl"
 function git-sed() {
     git grep -l "$1" | xargs sed -i '' -e "s/$1/$2/g"
 }
-
-. "$HOME/.cargo/env"
