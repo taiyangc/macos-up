@@ -7,7 +7,7 @@ This repo is an index, not an installer. It lists how to set up a new Mac for de
 | `native/` | `native.yaml` | `name: command` to run in bash |
 | `homebrew/` | `Brewfile` | `brew "name"` for a formula, `cask "name"` for an app |
 | `download/` | `download.yaml` | `name: URL` to download from and install by hand |
-| `config/` | `config.yaml` | `file: destination`, where `file` is a path under `config/` or a GitHub URL |
+| `config/` | `config.yaml` | `file: destination`, where `file` is a file directly in `config/` or a GitHub URL |
 | `node/` | `node.yaml` | `name: package` to install with `npm install -g` |
 | `python/` | `python.yaml` | `name: package` to install with `uv tool install` |
 | `setup/` | `setup.yaml` | `name: command` to run in bash after installing, named after what it sets up |
@@ -32,7 +32,7 @@ Run commands or copy files only when the user asks. Back up an existing destinat
 ## Adding entries
 
 - Append one line to the right list. Put a note in a trailing `# comment`.
-- For a config, save the file under `config/` (for example `config/git/gitconfig`), then append `git/gitconfig: ~/.gitconfig` to `config/config.yaml`.
+- For a config, save the file directly in `config/`, with no subfolder (for example `config/gitconfig`), then append `gitconfig: ~/.gitconfig` to `config/config.yaml`. If the file's name is generic, such as `config.toml`, name it after its tool instead: `codex.toml: ~/.codex/config.toml`.
 - For a config kept on GitHub, save no copy. Append its GitHub URL in place of the path, for example `https://github.com/<owner>/dotfiles/tree/main/nvim: ~/.config/nvim`. A file's URL has `/blob/<ref>/<path>`, a directory's has `/tree/<ref>/<path>`, and a whole repo's is `https://github.com/<owner>/<repo>`.
 - In YAML, a value that spans lines, starts with a quote, or contains `: ` or ` #` goes in a `|` block. A value that starts with `@`, such as a scoped npm package, goes in double quotes.
 - For a new install type, create `<type>/<type>.yaml` with `name: value` lines and add a row to the table above.
