@@ -1,0 +1,2 @@
+# Prefer Homebrew's python. uv downloads a Python of its own only when a project or tool needs a version Homebrew doesn't have.
+python-preference = "system"

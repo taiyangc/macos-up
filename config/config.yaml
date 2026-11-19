@@ -3,3 +3,4 @@
 bash_profile: ~/.bash_profile
 vimrc: ~/.vimrc
 https://github.com/taiyangc/.claude: ~/.claude
+uv.toml: ~/.config/uv/uv.toml

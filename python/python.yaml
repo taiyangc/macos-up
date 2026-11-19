@@ -1,0 +1,2 @@
+# name: package to install with uv tool install. Notes as # comments.
+# Tools run on Homebrew's python. When Homebrew moves python to a new minor version, rebuild them: uv tool upgrade --all --python <version>.

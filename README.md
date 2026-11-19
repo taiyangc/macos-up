@@ -12,6 +12,8 @@ Append one line to the list for its type:
 | `homebrew/` | `Brewfile` | `brew "git"` or `cask "firefox"` |
 | `download/` | `download.yaml` | `xcode: https://developer.apple.com/download/applications/` |
 | `config/` | `config.yaml` | `git/gitconfig: ~/.gitconfig`, with the file saved as `config/git/gitconfig` |
+| `node/` | `node.yaml` | `pnpm: pnpm`, or `codex: "@openai/codex"`, quoted since it starts with `@` |
+| `python/` | `python.yaml` | `ruff: ruff`, installed with `uv tool install ruff` |
 | `setup/` | `setup.yaml` | `gh: gh auth login`, to run after `gh` is installed |
 
 - Notes go in `# comments`.

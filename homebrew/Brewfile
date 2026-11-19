@@ -12,3 +12,4 @@ brew "make"
 cask "wetype"
 cask "1password-cli"
 brew "cloudflared"
+brew "uv" # Python packages and tools; never pip install into Homebrew's python

@@ -1,0 +1,5 @@
+# name: package to install with npm install -g. Notes as # comments.
+# A scoped package starts with @, which a YAML value can't, so quote it: name: "@<scope>/<package>".
+pnpm: pnpm
+npm: npm
+codex: "@openai/codex"

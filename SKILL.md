@@ -1,6 +1,6 @@
 ---
 name: macos-up
-description: Personal index for setting up a new Mac for development. Covers what to install first, how to install and manage each tool (such as Node or Python), what to run after installing it (such as making Homebrew bash the login shell), and which config files go where. Use when the user asks about bootstrapping a Mac or installing or configuring a developer tool on macOS.
+description: Personal index for setting up a new Mac for development. Covers what to install first, how to install and manage each tool (such as Node or Python, or a command-line tool from npm or PyPI), what to run after installing it (such as making Homebrew bash the login shell), and which config files go where. Use when the user asks about bootstrapping a Mac or installing or configuring a developer tool on macOS.
 ---
 
 # macos-up
