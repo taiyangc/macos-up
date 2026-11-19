@@ -15,6 +15,7 @@ Append one line to the list for its type:
 | `node/` | `node.yaml` | `pnpm: pnpm`, or `codex: "@openai/codex"`, quoted since it starts with `@` |
 | `python/` | `python.yaml` | `ruff: ruff`, installed with `uv tool install ruff` |
 | `setup/` | `setup.yaml` | `gh: gh auth login`, to run after `gh` is installed |
+| `scripts/` | `scripts.yaml` | `flush-dns: bash flush-dns.sh # Clears the DNS cache`, with the script saved as `scripts/flush-dns.sh` and run from there |
 
 - Notes go in `# comments`.
 - A command that spans lines, starts with a quote, or contains `: ` or ` #` goes in a YAML `|` block:
@@ -33,6 +34,7 @@ Append one line to the list for its type:
   https://github.com/<owner>/tmux-config: ~/.config/tmux
   ```
 
+- A script can be in any language: start its command with the interpreter, such as `bash`, `uv run` or `osascript`. Inside `scripts/`, `uv init --script <file>.py` starts a Python script, `uv add --script <file>.py <package>` adds a package it needs, and `uv run` installs the packages.
 - A new install type is a new folder with a `<type>.yaml` of `name: value` lines. Add it to the table in `AGENTS.md`.
 - To fill the Brewfile from this Mac, run `brew bundle dump --file=-`. It prints everything you installed with Homebrew, with descriptions.
 

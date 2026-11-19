@@ -1,0 +1,3 @@
+# name: command to run inside scripts/, for a script saved directly in it, in any language (e.g. flush-dns: bash flush-dns.sh). Say what it's for in a # comment.
+# Write an argument to fill in as <arg>. Use a | block for a command that spans lines, starts with a quote, or contains ": " or " #".
+claude-api: SID=<session-id> bash claude-api.sh # Use claude platform credits from CLI directly while being blocked from claude code
